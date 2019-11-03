@@ -1,0 +1,14 @@
+<!-- Search bar -->
+<div id="search-component">
+  <!-- Title -->
+  <h2>Onondaga Dictionary</h2>
+  <input #searchBox id="search-box" />
+
+  <ul class="search-result">
+    <li *ngFor="let wordName of matchedWords">
+      <a (click)="openWordDetail(wordName)">
+        {{ wordName }}
+      </a>
+    </li>
+  </ul>
+</div>
