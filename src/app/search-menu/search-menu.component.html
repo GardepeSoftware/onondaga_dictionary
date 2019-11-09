@@ -1,14 +1,16 @@
-<!-- Search bar -->
-<div id="search-component">
+<div id="container">
   <!-- Title -->
-  <h2>Onondaga Dictionary</h2>
-  <input #searchBox id="search-box" />
+  <h2 id="title">Onondaga Dictionary</h2>
+  <div class="search-component">
+    <!-- Search bar -->
+    <input #searchBox id="search-box" />
+  </div>
+</div>
 
-  <ul class="search-result">
-    <li *ngFor="let wordName of matchedWords">
-      <a (click)="openWordDetail(wordName)">
-        {{ wordName }}
-      </a>
-    </li>
-  </ul>
+<div id="search-results">
+  <div class="resultItem" *ngFor="let wordName of matchedWords">
+    <a (click)="openWordDetail(wordName)">
+      {{ wordName }}
+    </a>
+  </div>
 </div>

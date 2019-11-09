@@ -44,6 +44,11 @@ export class SearchMenuComponent implements OnInit {
 
     typeahead.subscribe(data => {
       this.matchedWords = data;
+      if (data.length < 2) {
+        this.clearSearch();
+      } else {
+        // TODO: Hide currently displayed definition if visible
+      }
     });
   }
 
