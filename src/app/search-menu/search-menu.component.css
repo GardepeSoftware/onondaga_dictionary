@@ -1,18 +1,65 @@
 /* HeroSearch private styles */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #container {
   text-align: center;
   margin: 0;
   padding: 0px;
   height: 57px;
-  background-color: #6cd5eb;
-  border: 1px solid gray;
 }
 
 #title {
   font-size: 20px;
-  margin-top: 8px;
-  margin-bottom: 1px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 #search-component {
@@ -20,16 +67,26 @@
 }
 
 #search-box {
-  width: 370px;
+  margin: 0;
+  padding: 0;
+  width: 179px;
+  font-size: 16px;
+  border: 3px solid #00b4cc;
   height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
 }
 
 #search-results {
+  padding: 0;
+  top: 30%;
+  left: 50%;
   display: table;
   margin: auto;
 }
 
 .resultItem {
   border: 1px solid black;
-  width: 370px;
+  width: 179px;
 }

@@ -1,16 +1,22 @@
 <div id="container">
   <!-- Title -->
   <h2 id="title">Onondaga Dictionary</h2>
-  <div class="search-component">
-    <!-- Search bar -->
-    <input #searchBox id="search-box" />
-  </div>
-</div>
+  <!-- Search bar -->
+  <div><input id="search-box" /></div>
 
-<div id="search-results">
-  <div class="resultItem" *ngFor="let wordName of matchedWords">
-    <a (click)="openWordDetail(wordName)">
+  <div id="search-results">
+    <div
+      class="resultItem"
+      *ngFor="let wordName of matchedWords"
+      (click)="showDefinition(wordName)"
+    >
       {{ wordName }}
-    </a>
+    </div>
+  </div>
+
+  <!-- Word definition -->
+  <div *ngIf="searchedWordName != null">
+    <p id="word-name">{{ searchedWordName }}:</p>
+    <p id="word-definition">{{ searchedDefinition }}</p>
   </div>
 </div>
