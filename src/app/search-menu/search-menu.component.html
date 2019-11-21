@@ -1,8 +1,10 @@
 <div id="container">
-  <!-- Title -->
-  <h2 id="title">Onondaga Dictionary</h2>
-  <!-- Search bar -->
-  <div><input id="search-box" /></div>
+  <div id="top-bar">
+    <!-- Title -->
+    <h2 id="title">Onondaga Dictionary</h2>
+    <!-- Search bar -->
+    <div><input id="search-box" /></div>
+  </div>
 
   <div id="search-results">
     <div
@@ -15,8 +17,13 @@
   </div>
 
   <!-- Word definition -->
-  <div *ngIf="searchedWordName != null">
-    <p id="word-name">{{ searchedWordName }}:</p>
-    <p id="word-definition">{{ searchedDefinition }}</p>
+  <div id="word-and-definition" *ngIf="searchedWordName != null">
+    <div id="word-name-wrapper">
+      <p id="word-name">{{ searchedWordName }}:</p>
+    </div>
+
+    <div id="word-definition-wrapper">
+      <p id="word-definition">{{ searchedDefinition }}</p>
+    </div>
   </div>
 </div>
